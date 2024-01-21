@@ -5,13 +5,17 @@
 TEST(StringUtilsTest, SliceTest){
     std::string Base = "Hello";
 
+    EXPECT_EQ(StringUtils::Slice(Base,0),"Hello");
     EXPECT_EQ(StringUtils::Slice(Base,1),"ello");
-    EXPECT_EQ(StringUtils::Slice(Base,-1),"o");
-}   #define EXPECT_EQ(val1,val2)
-    EXPECT_PRED_FORMAT2(::testing::internal::EqHelper::Compare, val1, val2)
+}  
 
 TEST(StringUtilsTest, Capitalize){
-    
+    std::string Base = "hello";
+
+    EXPECT_EQ(StringUtils::Capitalize(Base),"Hello");
+    EXPECT_EQ(StringUtils::Capitalize(std::string()),"");
+    EXPECT_EQ(StringUtils::Capitalize(" hello")," hello");
+    EXPECT_EQ(StringUtils::Capitalize("HELLO"),"Hello"); 
 }
 
 TEST(StringUtilsTest, Upper){

@@ -13,4 +13,9 @@ LDFLAGS = -lgtest -lpthread
 all: directories
 
 $(OBJ_DIR)/StringUtils.o: $(SRC_DIR)/StringUtils.cpp $(INC_DIR)/StringUtils
+	$(CXX) -o $(OBJ_DIR)/StringUtils.cpp
+
+directories:
+	mkdir -p $(OBJ_DIR)
+	mkdir -p $(BIN_DIR)
 	
