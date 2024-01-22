@@ -1,23 +1,22 @@
 #include "StringUtils.h"
-#include <algorithm>
 #include <cctype>
 
 namespace StringUtils{
 
 std::string Slice(const std::string &str, ssize_t start, ssize_t end) noexcept{
     // Replace code here
-    return str.substr(start,str.length()-start);
+    // return str.substr(start,str.length()-start);
 }
 
 std::string Capitalize(const std::string &str) noexcept{
-    auto Copy = str;
+    // auto Copy = str;
     
-    // Replace code here
-    Copy[0] = toupper(str[0]);
-    for(size_t Index = 1; Index < Copy.length(); Index++) {
-        Copy[Index] = tolower(Copy[Index]);
-    }
-    return Copy;
+    // // Replace code here
+    // Copy[0] = toupper(str[0]);
+    // for(size_t Index = 1; Index < Copy.length(); Index++) {
+    //     Copy[Index] = tolower(Copy[Index]);
+    // }
+    // return Copy;
 }
 
 std::string Upper(const std::string &str) noexcept{
