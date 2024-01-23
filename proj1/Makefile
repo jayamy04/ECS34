@@ -12,11 +12,11 @@ LDFLAGS = -lgtest -lgtest_main -lpthread
 
 all: directories run
 
-run: $(BIN_DIR)/testutils
-	$(BIN_DIR)/testutils
+run: $(BIN_DIR)/teststrutils
+	$(BIN_DIR)/teststrutils
 
-$(BIN_DIR)/testutils: $(OBJ_DIR)/StringUtils.o $(OBJ_DIR)/StringUtilsTest.o
-	$(CXX) -o $(BIN_DIR)/testutils $(CXXFLAGS) $(OBJ_DIR)/StringUtils.o $(OBJ_DIR)/StringUtilsTest.o $(LDFLAGS)
+$(BIN_DIR)/teststrutils: $(OBJ_DIR)/StringUtils.o $(OBJ_DIR)/StringUtilsTest.o
+	$(CXX) -o $(BIN_DIR)/teststrutils $(CXXFLAGS) $(OBJ_DIR)/StringUtils.o $(OBJ_DIR)/StringUtilsTest.o $(LDFLAGS)
 
 $(OBJ_DIR)/StringUtils.o: $(SRC_DIR)/StringUtils.cpp $(INC_DIR)/StringUtils.h
 	$(CXX) -o $(OBJ_DIR)/StringUtils.o -c $(CXXFLAGS) $(SRC_DIR)/StringUtils.cpp
